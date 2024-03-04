@@ -1,0 +1,15 @@
+@use './variables';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 24px;
+    background-color: variables.$white;
+    font-family: variables.$font;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

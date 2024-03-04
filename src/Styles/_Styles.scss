@@ -1,0 +1,268 @@
+@use './variables';
+@use './initial';
+@use './mixins';
+
+
+//header
+.div-inicio-principal{
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    background-color: variables.$red;
+}
+
+.div-inicio{
+    margin: 10px 20px;
+    padding: 10px 20px;
+}
+
+#proyectos{
+    @include mixins.inicio;
+}
+
+#contacto{
+    @include mixins.inicio;
+}
+
+#persona{
+    @include mixins.inicio;
+}
+
+.seleccionado {
+    color: variables.$red-dark !important;
+    transform: scale(1.5) !important;
+}
+
+//Bibliografia
+.contenedorPerfil{
+    margin: 160px 320px;
+    background-color: variables.$red;
+    display: flex;
+}
+
+.contImag{
+    align-items: center;
+    justify-content: center;
+}
+
+.Foto_perfil {
+    margin:10px;
+    background-color: variables.$red-dark;
+    padding: 5px;
+    width: 120px;
+    height: 170px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contBibliografia{
+    background-color: variables.$red;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    & #nombre{
+        @include mixins.contenidoBibliografia;
+    }
+    & #nacimiento{
+        @include mixins.contenidoBibliografia;
+        font-size: 20px; 
+    }
+}
+
+.descripcion{
+    background-color: variables.$red;
+    font-size: 20px;
+    color: variables.$white;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.botonSaber {
+    @include mixins.btnModal;
+    background: variables.$red-dark;
+    &:hover{
+        background: black;
+    }
+}
+
+//Diseño del Modal
+.modalInfo{
+    max-width: 70ch;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-color: red;
+    & p{
+        font-size: 15px;
+    }
+}
+
+.contenedor-botonCerrar{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.botonCerrar{
+    @include mixins.btnModal;
+    background: variables.$red;
+    deoration
+    &:hover{
+        background: variables.$red-dark;
+    }
+}
+
+.CV {
+    @include mixins.btnModal;
+    text-decoration: none;
+    background: variables.$red-dark;
+    &:hover{
+        background: black;
+    }
+}
+
+
+//Contactos
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+form{
+    background-color: variables.$red;
+    padding: 20px;
+    width: 800px;
+    & h2{
+        background-color: variables.$white;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin: 10px;
+        width: calc(100% - 15px);
+    }
+    & label{
+        color: variables.$white;
+        padding: 10px;
+        margin: 10px;
+        background-color: variables.$red-dark;
+        font-size: 15px;
+        display: block;
+        width: calc(100% - 15px);
+    }
+    & input{
+        padding: 10px;
+        margin: 10px;
+        background-color: variables.$white;
+        font-size: 15px;
+        display: block;
+        width: calc(100% - 15px);
+    }
+    & .btnEnviar{
+        @include mixins.btnModal;
+        background-color: black;
+        width: 100%;
+    }
+    & textarea{
+        padding: 10px;
+        margin: 5px;
+        background-color: variables.$white; /* Cambia el color de fondo según tus preferencias */
+        font-size: 15px;
+        display: block;
+        width: calc(100% - 15px); /* Ancho igual al 100% menos el padding y margen */
+        height: 300px; /* Ajusta la altura según tus necesidades */
+        resize: vertical; /* Permite redimensionar verticalmente */
+        border-radius: 5px; /* Opcional: agrega bordes redondeados */
+        border: 1px solid variables.$red-dark; /* Opcional: agrega borde */
+    }
+}
+
+
+
+//Proyectos
+.proyecto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contProyecto{
+    margin: 100px;
+    width: 700px;
+    background-color: variables.$red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .contProyecto2{
+        & .contProyecto-img{
+            max-width: 400px;
+            max-height: 300px;
+            margin: 20px 10px;
+        }
+        & .contProyecto-contDescricion-contTecno{
+            & i{
+                margin: 5px;
+                padding: 5px;
+            }
+        }
+    }
+    & .contProyecto-contDescripcion{
+        padding: 5px;
+        margin: 20px;
+        & .contProyecto-contDescricion-descripcion{
+            font-size: 20px;
+        }
+        & .contProyecto-contDescricion-contTecno{
+            & i{
+                margin: 5px;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+//Footers
+.pie{
+    background-color: variables.$red-dark;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    & .redes{
+        justify-content: center; //central horizontalmente
+        align-items: center; //centrar verticalmente
+        display: flex;
+        & a {
+            text-decoration: none; //para sacar el subrayado 
+            display: inline-block;
+            color: #fff;
+            background-color: transparent;
+            text-align: center;
+            margin: 10px;
+            padding: 5px;
+            transition: 300 ms ease;
+            &:hover{
+                color:rgb(0, 0, 0);
+            }
+        }
+    }
+    & .derechos{
+        background-color: red;
+        padding: 2px;
+        text-align: center;
+        color: #fff;
+        & small{
+            font-size: 15px;
+        }
+    }
+}
+
+
+
+
+
+
+

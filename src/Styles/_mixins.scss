@@ -1,0 +1,35 @@
+@use 'variables';
+
+@mixin inicio{
+    display: inline-block;
+    text-align: center;
+    color: variables.$white;
+    font-size: 1em;
+    margin: 30px 0;
+    letter-spacing: 4px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    &:hover{
+        cursor:pointer;
+    }
+}
+
+@mixin contenidoBibliografia{
+    margin: 5px 0px;
+    padding: 5px;
+    background-color: variables.$red-dark;
+    font-size: 25px;
+    color: variables.$white;
+}
+
+@mixin btnModal{
+    cursor: pointer;
+    border: none;
+    color: azure;
+    padding: 10px;
+    margin: 10px;
+    font-size: 12px;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+}

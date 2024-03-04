@@ -1,0 +1,329 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 24px;
+  background-color: hsl(0, 0%, 95%);
+  font-family: "Space Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.div-inicio-principal {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  background-color: hsl(0, 100%, 50%);
+}
+
+.div-inicio {
+  margin: 10px 20px;
+  padding: 10px 20px;
+}
+
+#proyectos {
+  display: inline-block;
+  text-align: center;
+  color: hsl(0, 0%, 95%);
+  font-size: 1em;
+  margin: 30px 0;
+  letter-spacing: 4px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+#proyectos:hover {
+  cursor: pointer;
+}
+
+#contacto {
+  display: inline-block;
+  text-align: center;
+  color: hsl(0, 0%, 95%);
+  font-size: 1em;
+  margin: 30px 0;
+  letter-spacing: 4px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+#contacto:hover {
+  cursor: pointer;
+}
+
+#persona {
+  display: inline-block;
+  text-align: center;
+  color: hsl(0, 0%, 95%);
+  font-size: 1em;
+  margin: 30px 0;
+  letter-spacing: 4px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+#persona:hover {
+  cursor: pointer;
+}
+
+.seleccionado {
+  color: hsl(0, 100%, 25%) !important;
+  transform: scale(1.5) !important;
+}
+
+.contenedorPerfil {
+  margin: 160px 320px;
+  background-color: hsl(0, 100%, 50%);
+  display: flex;
+}
+
+.contImag {
+  align-items: center;
+  justify-content: center;
+}
+
+.Foto_perfil {
+  margin: 10px;
+  background-color: hsl(0, 100%, 25%);
+  padding: 5px;
+  width: 120px;
+  height: 170px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contBibliografia {
+  background-color: hsl(0, 100%, 50%);
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.contBibliografia #nombre {
+  margin: 5px 0px;
+  padding: 5px;
+  background-color: hsl(0, 100%, 25%);
+  font-size: 25px;
+  color: hsl(0, 0%, 95%);
+}
+.contBibliografia #nacimiento {
+  margin: 5px 0px;
+  padding: 5px;
+  background-color: hsl(0, 100%, 25%);
+  font-size: 25px;
+  color: hsl(0, 0%, 95%);
+  font-size: 20px;
+}
+
+.descripcion {
+  background-color: hsl(0, 100%, 50%);
+  font-size: 20px;
+  color: hsl(0, 0%, 95%);
+  align-items: center;
+  justify-content: center;
+}
+
+.botonSaber {
+  cursor: pointer;
+  border: none;
+  color: azure;
+  padding: 10px;
+  margin: 10px;
+  font-size: 12px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  background: hsl(0, 100%, 25%);
+}
+.botonSaber:hover {
+  background: black;
+}
+
+.modalInfo {
+  max-width: 70ch;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border-color: red;
+}
+.modalInfo p {
+  font-size: 15px;
+}
+
+.contenedor-botonCerrar {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.botonCerrar {
+  cursor: pointer;
+  border: none;
+  color: azure;
+  padding: 10px;
+  margin: 10px;
+  font-size: 12px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  background: hsl(0, 100%, 50%);
+}
+deoration .botonCerrar:hover {
+  background: hsl(0, 100%, 25%);
+}
+
+.CV {
+  cursor: pointer;
+  border: none;
+  color: azure;
+  padding: 10px;
+  margin: 10px;
+  font-size: 12px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: hsl(0, 100%, 25%);
+}
+.CV:hover {
+  background: black;
+}
+
+.formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+form {
+  background-color: hsl(0, 100%, 50%);
+  padding: 20px;
+  width: 800px;
+}
+form h2 {
+  background-color: hsl(0, 0%, 95%);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  width: calc(100% - 15px);
+}
+form label {
+  color: hsl(0, 0%, 95%);
+  padding: 10px;
+  margin: 10px;
+  background-color: hsl(0, 100%, 25%);
+  font-size: 15px;
+  display: block;
+  width: calc(100% - 15px);
+}
+form input {
+  padding: 10px;
+  margin: 10px;
+  background-color: hsl(0, 0%, 95%);
+  font-size: 15px;
+  display: block;
+  width: calc(100% - 15px);
+}
+form .btnEnviar {
+  cursor: pointer;
+  border: none;
+  color: azure;
+  padding: 10px;
+  margin: 10px;
+  font-size: 12px;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+}
+form textarea {
+  padding: 10px;
+  margin: 5px;
+  background-color: hsl(0, 0%, 95%); /* Cambia el color de fondo según tus preferencias */
+  font-size: 15px;
+  display: block;
+  width: calc(100% - 15px); /* Ancho igual al 100% menos el padding y margen */
+  height: 300px; /* Ajusta la altura según tus necesidades */
+  resize: vertical; /* Permite redimensionar verticalmente */
+  border-radius: 5px; /* Opcional: agrega bordes redondeados */
+  border: 1px solid hsl(0, 100%, 25%); /* Opcional: agrega borde */
+}
+
+.proyecto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contProyecto {
+  margin: 100px;
+  width: 700px;
+  background-color: hsl(0, 100%, 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contProyecto .contProyecto2 .contProyecto-img {
+  max-width: 400px;
+  max-height: 300px;
+  margin: 20px 10px;
+}
+.contProyecto .contProyecto2 .contProyecto-contDescricion-contTecno i {
+  margin: 5px;
+  padding: 5px;
+}
+.contProyecto .contProyecto-contDescripcion {
+  padding: 5px;
+  margin: 20px;
+}
+.contProyecto .contProyecto-contDescripcion .contProyecto-contDescricion-descripcion {
+  font-size: 20px;
+}
+.contProyecto .contProyecto-contDescripcion .contProyecto-contDescricion-contTecno i {
+  margin: 5px;
+  padding: 5px;
+}
+
+.pie {
+  background-color: hsl(0, 100%, 25%);
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+.pie .redes {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.pie .redes a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  background-color: transparent;
+  text-align: center;
+  margin: 10px;
+  padding: 5px;
+  transition: 300 ms ease;
+}
+.pie .redes a:hover {
+  color: rgb(0, 0, 0);
+}
+.pie .derechos {
+  background-color: red;
+  padding: 2px;
+  text-align: center;
+  color: #fff;
+}
+.pie .derechos small {
+  font-size: 15px;
+}
+
+/*# sourceMappingURL=styles.css.map */
