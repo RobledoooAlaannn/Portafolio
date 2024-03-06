@@ -17,8 +17,10 @@ body {
 
 .div-inicio-principal {
   display: flex;
-  align-items: center; /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  justify-content: center;
+  /* Centra horizontalmente */
   background-color: hsl(0, 100%, 50%);
 }
 
@@ -125,19 +127,45 @@ body {
   justify-content: center;
 }
 
+.contenedorBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .botonSaber {
   cursor: pointer;
   border: none;
   color: azure;
   padding: 10px;
   margin: 10px;
-  font-size: 12px;
+  font-size: 15px;
   border-radius: 12px;
+  width: 100%;
   justify-content: center;
   align-items: center;
   background: hsl(0, 100%, 25%);
 }
 .botonSaber:hover {
+  background: black;
+}
+
+.CV {
+  cursor: pointer;
+  border: none;
+  color: azure;
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+  border-radius: 12px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: hsl(0, 100%, 25%);
+  text-align: center;
+}
+.CV:hover {
   background: black;
 }
 
@@ -148,8 +176,46 @@ body {
   align-items: center;
   border-color: red;
 }
+.modalInfo h2 {
+  background-color: hsl(0, 100%, 50%);
+  padding: 5px;
+  margin: 5px;
+  font-size: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+.modalInfo ul {
+  padding: 5px;
+  margin: 5px;
+}
+.modalInfo ul li {
+  padding: 5px;
+  margin: 5px;
+}
 .modalInfo p {
-  font-size: 15px;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+}
+
+.modalSkills {
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  border-color: red;
+}
+
+.skills {
+  height: 100%;
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  color: hsl(0, 100%, 50%);
+}
+
+#skill {
+  padding: 10px;
+  margin: 10px;
 }
 
 .contenedor-botonCerrar {
@@ -164,31 +230,15 @@ body {
   color: azure;
   padding: 10px;
   margin: 10px;
-  font-size: 12px;
+  font-size: 15px;
   border-radius: 12px;
+  width: 100%;
   justify-content: center;
   align-items: center;
   background: hsl(0, 100%, 50%);
 }
-deoration .botonCerrar:hover {
+.botonCerrar:hover {
   background: hsl(0, 100%, 25%);
-}
-
-.CV {
-  cursor: pointer;
-  border: none;
-  color: azure;
-  padding: 10px;
-  margin: 10px;
-  font-size: 12px;
-  border-radius: 12px;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  background: hsl(0, 100%, 25%);
-}
-.CV:hover {
-  background: black;
 }
 
 .formulario {
@@ -236,8 +286,9 @@ form .btnEnviar {
   color: azure;
   padding: 10px;
   margin: 10px;
-  font-size: 12px;
+  font-size: 15px;
   border-radius: 12px;
+  width: 100%;
   justify-content: center;
   align-items: center;
   background-color: black;
@@ -246,14 +297,20 @@ form .btnEnviar {
 form textarea {
   padding: 10px;
   margin: 5px;
-  background-color: hsl(0, 0%, 95%); /* Cambia el color de fondo según tus preferencias */
+  background-color: hsl(0, 0%, 95%);
+  /* Cambia el color de fondo según tus preferencias */
   font-size: 15px;
   display: block;
-  width: calc(100% - 15px); /* Ancho igual al 100% menos el padding y margen */
-  height: 300px; /* Ajusta la altura según tus necesidades */
-  resize: vertical; /* Permite redimensionar verticalmente */
-  border-radius: 5px; /* Opcional: agrega bordes redondeados */
-  border: 1px solid hsl(0, 100%, 25%); /* Opcional: agrega borde */
+  width: calc(100% - 15px);
+  /* Ancho igual al 100% menos el padding y margen */
+  height: 300px;
+  /* Ajusta la altura según tus necesidades */
+  resize: vertical;
+  /* Permite redimensionar verticalmente */
+  border-radius: 5px;
+  /* Opcional: agrega bordes redondeados */
+  border: 1px solid hsl(0, 100%, 25%);
+  /* Opcional: agrega borde */
 }
 
 .proyecto {

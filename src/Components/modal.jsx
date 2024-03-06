@@ -5,16 +5,17 @@ import "../Styles/styles.css";
 
 export default class Modal extends Component {
   render() {
-    const { children, toggle, active } = this.props;
+    const { children, toggle, active, modalPara } = this.props;
 
     return (
-      <Portal>
-        {active && (
-          <div style={styles.wrapper}>
-            <div style={styles.window}>
-              <div>{children}</div>
+      <Portal> {/* Utiliza el componente Portal para renderizar este modal fuera de la jerarquía de DOM normal */}
+      {/* Si la prop 'active' es true, muestra el modal */}
+        {active && (  
+          <div style={styles.wrapper} > {/* Contenedor del modal */}
+            <div style={modalPara ? styles.window : styles.windowRound }> {/* Ventana del modal */}
+              <div className="modalSkills"> {children}</div> {/* Renderiza el contenido del modal */}
             </div>
-            <div onClick={toggle} style={styles.background}/>
+            <div onClick={toggle} style={styles.background}/> {/* Un fondo opaco que se cierra cuando haces clic en él */}
           </div>
         )}
       </Portal>
@@ -41,6 +42,20 @@ const styles = {
     boxShadow: "2px 2px 10px rgba(0,0,0,0.3)",
     zIndex: 10,
     minWidth: 320,
+  },
+  windowRound: {
+    position: "relative",
+    background: "#fff",
+    borderRadius: "50%", // Establece el radio para hacerlo circular
+    width: "800px", // Tamaño del círculo
+    height: "800px", // Tamaño del círculo
+    padding: "15px",
+    boxShadow: "2px 2px 10px rgba(0,0,0,0.3)",
+    zIndex: 10,
+    minWidth: 320,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   background: {
     position: 'absolute',

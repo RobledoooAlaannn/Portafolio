@@ -7,8 +7,14 @@ import Modal from "./modal";
 export function Bibliografia() {
   const [modalAbierto, setModalAbierto] = useState(false);
 
-  const toggle = () => {
+  const toggleInfo = () => {
     setModalAbierto(!modalAbierto);
+  };
+
+  const [modalSkills, setSkills] = useState(false);
+
+  const toggleSkills = () => {
+    setSkills(!modalSkills);
   };
 
   return (
@@ -42,26 +48,84 @@ export function Bibliografia() {
             contribuir al éxito de futuros proyectos! ¡Gracias por visitar mi
             portafolio!
           </p>
-          <button class="botonSaber" onClick={toggle}>
-            Saber más
-          </button>
 
-          <a download="Robledo Alan cv" href={CV} className="CV">
-            {" "}
-            Descargar CV
-          </a>
+          <div className="contenedorBtns">
+            <button className="botonSaber" onClick={toggleInfo}>
+              Saber más
+            </button>
 
-          <button class="botonSaber">
-            Mis Skills
-          </button>
+            <a download="Robledo Alan cv" href={CV} className="CV">
+              Descargar CV{" "}
+              <span>
+                <i className="fa-solid fa-file-arrow-down"></i>
+              </span>
+            </a>
 
-          <Modal active={modalAbierto} toggle={toggle}>
+            <button className="botonSaber" onClick={toggleSkills}>
+              Mis Skills
+            </button>
+          </div>
+
+          {/*modal de habilidades*/}
+          <Modal active={modalSkills} toggle={toggleSkills} modalPara={true}>
+            <h1 className="skills">Habilidades</h1>
+            <i className="fa-solid fa-database" id="skill"></i>
+            <i className="fa-brands fa-python" id="skill"></i>
+            <i className="fa-brands fa-java" id="skill"></i>
+            <i className="fa-brands fa-js" id="skill"></i>
+            <i className="fa-brands fa-css3" id="skill"></i>
+            <i className="fa-brands fa-sass" id="skill"></i>
+            <i className="fa-brands fa-php" id="skill"></i>
+            <i className="fa-brands fa-react" id="skill"></i>
+            <i className="fa-brands fa-node" id="skill"></i>
+            <i className="fa-solid fa-registered" id="skill"></i>
+            <i class="fa-brands fa-bootstrap" id="skill"></i>
+            <i className="fab fa-cuttlefish" id="skill">
+              ++
+            </i>
+            <i className="fab fa-cuttlefish" id="skill">
+              #
+            </i>
+            <div className="contenedor-botonCerrar">
+              <button className="botonCerrar" onClick={toggleSkills}>
+                Cerrar
+              </button>
+            </div>
+          </Modal>
+
+          {/*modal información personal*/}
+          <Modal active={modalAbierto} toggle={toggleInfo} modalPara={true}>
             <div modalAbierto class="modalInfo">
-              <p>
-                ¡Hola! Soy Alan, un apasionado de la informática con 22 años de
-              </p>
-              <div class="contenedor-botonCerrar">
-                <button class="botonCerrar" onClick={toggle}>
+              <h2>Estudios</h2>
+              <ul>
+                <li>
+                  Escuela de educación secundaria n°2, Marcos Paz — BACHILLER EN
+                  ECONOMÍA Y ADMINISTRACIÓN.
+                </li>
+                <li>
+                  Universidad nacional del oeste, Merlo — Lic. en informática.
+                  enero de 2020 - en curso
+                </li>
+                <li>
+                  Asistente de Informática, Nombre de la institución — Duración
+                  del itinerario
+                </li>
+              </ul>
+
+              <h2>Hobbies</h2>
+              <ul>
+                <li>Entrenar/Boxeo</li>
+                <li>Aprender/descubrir nuevas tecnologías</li>
+                <li>
+                  Leer libros de crecimiento personal o de ciencia ficcion
+                </li>
+              </ul>
+
+              <h2>Nivel de Inglés</h2>
+              <p>Basico</p>
+
+              <div className="contenedor-botonCerrar">
+                <button className="botonCerrar" onClick={toggleInfo}>
                   Cerrar
                 </button>
               </div>
