@@ -5,10 +5,10 @@ import CV from "../img/Mi CV.pdf";
 import Modal from "./modal";
 
 export function Bibliografia() {
-  const [modalAbierto, setModalAbierto] = useState(false);
+  const [modalabierto, setModalAbierto] = useState(false);
 
   const toggleInfo = () => {
-    setModalAbierto(!modalAbierto);
+    setModalAbierto(!modalabierto);
   };
 
   const [modalSkills, setSkills] = useState(false);
@@ -67,7 +67,7 @@ export function Bibliografia() {
           </div>
 
           {/*modal de habilidades*/}
-          <Modal active={modalSkills} toggle={toggleSkills} modalPara={true}>
+          <Modal estado={modalSkills} cambiarEstado={setSkills}>
             <h1 className="skills">Habilidades</h1>
             <i className="fa-solid fa-database" id="skill"></i>
             <i className="fa-brands fa-python" id="skill"></i>
@@ -94,8 +94,8 @@ export function Bibliografia() {
           </Modal>
 
           {/*modal información personal*/}
-          <Modal active={modalAbierto} toggle={toggleInfo} modalPara={true}>
-            <div modalAbierto class="modalInfo">
+          <Modal estado={modalabierto} cambiarEstado={toggleInfo} modalPara={true}>
+            <div modalabierto class="modalInfo">
               <h2>Estudios</h2>
               <ul>
                 <li>

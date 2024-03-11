@@ -227,8 +227,14 @@ form {
 
     & .btnEnviar {
         @include mixins.btnModal;
-        background-color: black;
+        background-color: variables.$red-dark;
         width: 100%;
+        transition: 300 ms ease;
+
+        &:hover {
+            background-color: black;
+
+        }
     }
 
     & textarea {

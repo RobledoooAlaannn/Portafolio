@@ -291,8 +291,12 @@ form .btnEnviar {
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: hsl(0, 100%, 25%);
   width: 100%;
+  transition: 300 ms ease;
+}
+form .btnEnviar:hover {
+  background-color: black;
 }
 form textarea {
   padding: 10px;
