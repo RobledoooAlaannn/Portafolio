@@ -23,13 +23,19 @@ body {
   /* Centra horizontalmente */
   background-color: hsl(0, 100%, 50%);
 }
+@media screen and (max-width: 768px) {
+  .div-inicio-principal {
+    flex-direction: column;
+    /* Cambia la dirección a columna en pantallas más pequeñas */
+  }
+}
 
 .div-inicio {
   margin: 10px 20px;
   padding: 10px 20px;
 }
 
-#proyectos {
+#proyectos, #contacto, #persona {
   display: inline-block;
   text-align: center;
   color: hsl(0, 0%, 95%);
@@ -39,35 +45,7 @@ body {
   text-decoration: none;
   transition: transform 0.3s ease;
 }
-#proyectos:hover {
-  cursor: pointer;
-}
-
-#contacto {
-  display: inline-block;
-  text-align: center;
-  color: hsl(0, 0%, 95%);
-  font-size: 1em;
-  margin: 30px 0;
-  letter-spacing: 4px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-#contacto:hover {
-  cursor: pointer;
-}
-
-#persona {
-  display: inline-block;
-  text-align: center;
-  color: hsl(0, 0%, 95%);
-  font-size: 1em;
-  margin: 30px 0;
-  letter-spacing: 4px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-#persona:hover {
+#proyectos:hover, #contacto:hover, #persona:hover {
   cursor: pointer;
 }
 
@@ -80,6 +58,15 @@ body {
   margin: 160px 320px;
   background-color: hsl(0, 100%, 50%);
   display: flex;
+}
+@media screen and (max-width: 1024px) {
+  .contenedorPerfil {
+    flex-direction: column;
+    /* Cambia la dirección a columna en pantallas más pequeñas */
+    align-items: center;
+    /* Centra horizontalmente */
+    margin: 50px auto;
+  }
 }
 
 .contImag {
@@ -96,6 +83,13 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .Foto_perfil {
+    width: 100px;
+    height: 140px;
+    /* Ajusta el tamaño de la imagen en pantallas más pequeñas */
+  }
+}
 
 .contBibliografia {
   background-color: hsl(0, 100%, 50%);
@@ -103,20 +97,19 @@ body {
   align-items: center;
   justify-content: center;
 }
-.contBibliografia #nombre {
-  margin: 5px 0px;
-  padding: 5px;
-  background-color: hsl(0, 100%, 25%);
-  font-size: 25px;
-  color: hsl(0, 0%, 95%);
-}
-.contBibliografia #nacimiento {
+.contBibliografia #nombre, .contBibliografia #nacimiento {
   margin: 5px 0px;
   padding: 5px;
   background-color: hsl(0, 100%, 25%);
   font-size: 25px;
   color: hsl(0, 0%, 95%);
   font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  .contBibliografia #nombre, .contBibliografia #nacimiento {
+    font-size: 16px;
+    /* Ajusta el tamaño del texto en pantallas más pequeñas */
+  }
 }
 
 .descripcion {
@@ -170,11 +163,17 @@ body {
 }
 
 .modalInfo {
-  max-width: 70ch;
   margin: auto;
   justify-content: center;
   align-items: center;
   border-color: red;
+}
+@media screen and (max-width: 768px) {
+  .modalInfo {
+    max-width: 90%;
+    height: 100%;
+    /* Ajusta el ancho máximo en pantallas más pequeñas */
+  }
 }
 .modalInfo h2 {
   background-color: hsl(0, 100%, 50%);
@@ -183,6 +182,7 @@ body {
   font-size: 30px;
   border-radius: 10px;
   text-align: center;
+  color: black;
 }
 .modalInfo ul {
   padding: 5px;
@@ -191,11 +191,13 @@ body {
 .modalInfo ul li {
   padding: 5px;
   margin: 5px;
+  color: black;
 }
 .modalInfo p {
   text-align: center;
   padding: 5px;
   margin: 5px;
+  color: black;
 }
 
 .modalSkills {
@@ -203,6 +205,12 @@ body {
   justify-content: center;
   align-items: center;
   border-color: red;
+}
+@media screen and (max-width: 768px) {
+  .modalSkills {
+    max-width: 90%;
+    /* Ajusta el ancho máximo en pantallas más pequeñas */
+  }
 }
 
 .skills {
@@ -216,6 +224,7 @@ body {
 #skill {
   padding: 10px;
   margin: 10px;
+  color: black;
 }
 
 .contenedor-botonCerrar {
@@ -247,11 +256,23 @@ body {
   align-items: center;
   margin: 20px;
 }
+@media screen and (max-width: 768px) {
+  .formulario {
+    flex-direction: column;
+    /* Cambia la dirección a columna en pantallas más pequeñas */
+  }
+}
 
 form {
   background-color: hsl(0, 100%, 50%);
   padding: 20px;
   width: 800px;
+}
+@media screen and (max-width: 1024px) {
+  form {
+    width: 90%;
+    /* Ajusta el ancho del formulario en pantallas más pequeñas */
+  }
 }
 form h2 {
   background-color: hsl(0, 0%, 95%);
@@ -331,10 +352,21 @@ form textarea {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 1024px) {
+  .contProyecto {
+    flex-direction: column;
+    margin: 50px auto;
+    width: 90%;
+  }
+}
+.contProyecto .contProyecto2 {
+  text-align: center; /* Centra horizontalmente el contenido */
+  margin: 20px 10px;
+}
 .contProyecto .contProyecto2 .contProyecto-img {
   max-width: 400px;
   max-height: 300px;
-  margin: 20px 10px;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
 }
 .contProyecto .contProyecto2 .contProyecto-contDescricion-contTecno i {
   margin: 5px;

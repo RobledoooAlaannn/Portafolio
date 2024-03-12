@@ -11,6 +11,10 @@
     justify-content: center;
     /* Centra horizontalmente */
     background-color: variables.$red;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        /* Cambia la dirección a columna en pantallas más pequeñas */
+    }
 }
 
 .div-inicio {
@@ -18,15 +22,7 @@
     padding: 10px 20px;
 }
 
-#proyectos {
-    @include mixins.inicio;
-}
-
-#contacto {
-    @include mixins.inicio;
-}
-
-#persona {
+#proyectos, #contacto,#persona {
     @include mixins.inicio;
 }
 
@@ -40,6 +36,13 @@
     margin: 160px 320px;
     background-color: variables.$red;
     display: flex;
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        /* Cambia la dirección a columna en pantallas más pequeñas */
+        align-items: center;
+        /* Centra horizontalmente */
+        margin: 50px auto;
+    }
 }
 
 .contImag {
@@ -55,6 +58,11 @@
     height: 170px;
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 768px) {
+        width: 100px;
+        height: 140px;
+        /* Ajusta el tamaño de la imagen en pantallas más pequeñas */
+    }
 }
 
 .contBibliografia {
@@ -63,13 +71,14 @@
     align-items: center;
     justify-content: center;
 
-    & #nombre {
-        @include mixins.contenidoBibliografia;
-    }
-
+    & #nombre,
     & #nacimiento {
         @include mixins.contenidoBibliografia;
         font-size: 20px;
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+            /* Ajusta el tamaño del texto en pantallas más pequeñas */
+        }
     }
 }
 
@@ -111,11 +120,15 @@
 
 //Diseño del Modal
 .modalInfo {
-    max-width: 70ch;
     margin: auto;
     justify-content: center;
     align-items: center;
     border-color: red;
+    @media screen and (max-width: 768px) {
+        max-width: 90%;
+        height: 100%;
+        /* Ajusta el ancho máximo en pantallas más pequeñas */
+    }
 
     & h2 {
         background-color: variables.$red;
@@ -124,6 +137,7 @@
         font-size: 30px;
         border-radius: 10px;
         text-align: center;
+        color: black;
     }
 
     & ul {
@@ -133,6 +147,7 @@
         & li {
             padding: 5px;
             margin: 5px;
+            color: black;
         }
     }
 
@@ -140,6 +155,7 @@
         text-align: center;
         padding: 5px;
         margin: 5px;
+        color: black;
     }
 }
 
@@ -148,6 +164,10 @@
     justify-content: center;
     align-items: center;
     border-color: red;
+    @media screen and (max-width: 768px) {
+        max-width: 90%;
+        /* Ajusta el ancho máximo en pantallas más pequeñas */
+    }
 }
 
 .skills {
@@ -161,6 +181,7 @@
 #skill {
     padding: 10px;
     margin: 10px;
+    color: black;
 }
 
 
@@ -188,12 +209,22 @@
     justify-content: center;
     align-items: center;
     margin: 20px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        /* Cambia la dirección a columna en pantallas más pequeñas */
+    }
 }
 
 form {
     background-color: variables.$red;
     padding: 20px;
     width: 800px;
+
+    @media screen and (max-width: 1024px) {
+        width: 90%;
+        /* Ajusta el ancho del formulario en pantallas más pequeñas */
+    }
 
     & h2 {
         background-color: variables.$white;
@@ -274,11 +305,20 @@ form {
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        margin: 50px auto;
+        width: 90%;
+    }
+
     & .contProyecto2 {
+        text-align: center; /* Centra horizontalmente el contenido */
+        margin: 20px 10px;
+
         & .contProyecto-img {
             max-width: 400px;
             max-height: 300px;
-            margin: 20px 10px;
+            margin: 0 auto; /* Centra la imagen horizontalmente */
         }
 
         & .contProyecto-contDescricion-contTecno {

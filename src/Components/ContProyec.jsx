@@ -23,6 +23,7 @@ export function ContProyec() {
             className="contProyecto-img"
             src={ejemplo}
             alt="captura de gpt"
+            loading="lazy"
           />
           <div className="contProyecto-contDescricion-contTecno">
             <i class="fa-solid fa-globe"></i>

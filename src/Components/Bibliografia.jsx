@@ -67,7 +67,11 @@ export function Bibliografia() {
           </div>
 
           {/*modal de habilidades*/}
-          <Modal estado={modalSkills} cambiarEstado={setSkills}>
+          <Modal
+            estado={modalSkills}
+            cambiarEstado={setSkills}
+            mostrarOverlay={true}
+          >
             <h1 className="skills">Habilidades</h1>
             <i className="fa-solid fa-database" id="skill"></i>
             <i className="fa-brands fa-python" id="skill"></i>
@@ -79,7 +83,7 @@ export function Bibliografia() {
             <i className="fa-brands fa-react" id="skill"></i>
             <i className="fa-brands fa-node" id="skill"></i>
             <i className="fa-solid fa-registered" id="skill"></i>
-            <i class="fa-brands fa-bootstrap" id="skill"></i>
+            <i className="fa-brands fa-bootstrap" id="skill"></i>
             <i className="fab fa-cuttlefish" id="skill">
               ++
             </i>
@@ -94,8 +98,13 @@ export function Bibliografia() {
           </Modal>
 
           {/*modal información personal*/}
-          <Modal estado={modalabierto} cambiarEstado={toggleInfo} modalPara={true}>
-            <div modalabierto class="modalInfo">
+          <Modal
+            estado={modalabierto}
+            cambiarEstado={toggleInfo}
+            modalPara={true}
+            mostrarOverlay={true}
+          >
+            <div class="modalInfo">
               <h2>Estudios</h2>
               <ul>
                 <li>
