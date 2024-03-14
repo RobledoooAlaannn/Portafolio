@@ -35,7 +35,9 @@ body {
   padding: 10px 20px;
 }
 
-#proyectos, #contacto, #persona {
+#proyectos,
+#contacto,
+#persona {
   display: inline-block;
   text-align: center;
   color: hsl(0, 0%, 95%);
@@ -45,7 +47,9 @@ body {
   text-decoration: none;
   transition: transform 0.3s ease;
 }
-#proyectos:hover, #contacto:hover, #persona:hover {
+#proyectos:hover,
+#contacto:hover,
+#persona:hover {
   cursor: pointer;
 }
 
@@ -267,6 +271,7 @@ form {
   background-color: hsl(0, 100%, 50%);
   padding: 20px;
   width: 800px;
+  border-radius: 20px;
 }
 @media screen and (max-width: 1024px) {
   form {
@@ -282,6 +287,7 @@ form h2 {
   align-items: center;
   padding: 10px;
   margin: 10px;
+  color: hsl(0, 0%, 95%);
   width: calc(100% - 15px);
 }
 form label {
@@ -292,8 +298,10 @@ form label {
   font-size: 15px;
   display: block;
   width: calc(100% - 15px);
+  border-radius: 10px;
 }
 form input {
+  border-radius: 10px;
   padding: 10px;
   margin: 10px;
   background-color: hsl(0, 0%, 95%);
@@ -332,41 +340,40 @@ form textarea {
   /* Ajusta la altura según tus necesidades */
   resize: vertical;
   /* Permite redimensionar verticalmente */
-  border-radius: 5px;
+  border-radius: 10px;
   /* Opcional: agrega bordes redondeados */
   border: 1px solid hsl(0, 100%, 25%);
   /* Opcional: agrega borde */
 }
 
-.proyecto {
+.contProyecto {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.contProyecto {
-  margin: 100px;
+  margin: 100px auto;
   width: 700px;
   background-color: hsl(0, 100%, 50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 20px;
 }
 @media screen and (max-width: 1024px) {
   .contProyecto {
-    flex-direction: column;
     margin: 50px auto;
     width: 90%;
+    flex-direction: column;
   }
 }
 .contProyecto .contProyecto2 {
-  text-align: center; /* Centra horizontalmente el contenido */
+  text-align: center;
+  /* Centra horizontalmente el contenido */
   margin: 20px 10px;
 }
 .contProyecto .contProyecto2 .contProyecto-img {
-  max-width: 400px;
-  max-height: 300px;
-  margin: 0 auto; /* Centra la imagen horizontalmente */
+  margin: auto;
+  /* Centra la imagen horizontalmente */
+}
+.contProyecto .contProyecto2 .contProyecto-img .img-proyecto {
+  width: 90%;
+  height: 90%;
 }
 .contProyecto .contProyecto2 .contProyecto-contDescricion-contTecno i {
   margin: 5px;

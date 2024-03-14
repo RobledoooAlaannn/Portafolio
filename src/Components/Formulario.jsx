@@ -2,7 +2,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Toast, Toaster } from "sonner";
+import { Toast, Toaster, toast } from "sonner";
 
 export function Formulario() {
   const form = useRef();
@@ -14,10 +14,10 @@ export function Formulario() {
       })
       .then(
         () => {
-          alert("Exito");
+          toast.success('Mensaje enviado con exito');
         },
         (error) => {
-          alert("Exito", error.text);
+          toast.error('Error al enviar el mensaje', error.text);
         }
       );
   };
@@ -108,6 +108,8 @@ export function Formulario() {
         <button className="btnEnviar" type="submit">
           ENVIAR
         </button>
+
+        <Toaster className="alerta" richColors  position='top-right' dri='auto'/>
       </form>
     </div>
   );

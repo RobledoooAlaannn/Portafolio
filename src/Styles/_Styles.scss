@@ -11,6 +11,7 @@
     justify-content: center;
     /* Centra horizontalmente */
     background-color: variables.$red;
+
     @media screen and (max-width: 768px) {
         flex-direction: column;
         /* Cambia la dirección a columna en pantallas más pequeñas */
@@ -22,7 +23,9 @@
     padding: 10px 20px;
 }
 
-#proyectos, #contacto,#persona {
+#proyectos,
+#contacto,
+#persona {
     @include mixins.inicio;
 }
 
@@ -36,6 +39,7 @@
     margin: 160px 320px;
     background-color: variables.$red;
     display: flex;
+
     @media screen and (max-width: 1024px) {
         flex-direction: column;
         /* Cambia la dirección a columna en pantallas más pequeñas */
@@ -58,6 +62,7 @@
     height: 170px;
     align-items: center;
     justify-content: center;
+
     @media screen and (max-width: 768px) {
         width: 100px;
         height: 140px;
@@ -75,6 +80,7 @@
     & #nacimiento {
         @include mixins.contenidoBibliografia;
         font-size: 20px;
+
         @media screen and (max-width: 768px) {
             font-size: 16px;
             /* Ajusta el tamaño del texto en pantallas más pequeñas */
@@ -124,6 +130,7 @@
     justify-content: center;
     align-items: center;
     border-color: red;
+
     @media screen and (max-width: 768px) {
         max-width: 90%;
         height: 100%;
@@ -164,6 +171,7 @@
     justify-content: center;
     align-items: center;
     border-color: red;
+
     @media screen and (max-width: 768px) {
         max-width: 90%;
         /* Ajusta el ancho máximo en pantallas más pequeñas */
@@ -220,6 +228,7 @@ form {
     background-color: variables.$red;
     padding: 20px;
     width: 800px;
+    border-radius: 20px;
 
     @media screen and (max-width: 1024px) {
         width: 90%;
@@ -234,6 +243,7 @@ form {
         align-items: center;
         padding: 10px;
         margin: 10px;
+        color: variables.$white;
         width: calc(100% - 15px);
     }
 
@@ -245,9 +255,11 @@ form {
         font-size: 15px;
         display: block;
         width: calc(100% - 15px);
+        border-radius: 10px;
     }
 
     & input {
+        border-radius: 10px;
         padding: 10px;
         margin: 10px;
         background-color: variables.$white;
@@ -281,7 +293,7 @@ form {
         /* Ajusta la altura según tus necesidades */
         resize: vertical;
         /* Permite redimensionar verticalmente */
-        border-radius: 5px;
+        border-radius: 10px;
         /* Opcional: agrega bordes redondeados */
         border: 1px solid variables.$red-dark;
         /* Opcional: agrega borde */
@@ -291,34 +303,33 @@ form {
 
 
 //Proyectos
-.proyecto {
+.contProyecto {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.contProyecto {
-    margin: 100px;
+    margin: 100px auto;
     width: 700px;
     background-color: variables.$red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 20px;
 
     @media screen and (max-width: 1024px) {
-        flex-direction: column;
         margin: 50px auto;
         width: 90%;
+        flex-direction: column;
     }
 
     & .contProyecto2 {
-        text-align: center; /* Centra horizontalmente el contenido */
+        text-align: center;
+        /* Centra horizontalmente el contenido */
         margin: 20px 10px;
 
         & .contProyecto-img {
-            max-width: 400px;
-            max-height: 300px;
-            margin: 0 auto; /* Centra la imagen horizontalmente */
+            margin: auto;
+            /* Centra la imagen horizontalmente */
+            & .img-proyecto{
+                width: 90%;
+                height: 90%;
+            }
         }
 
         & .contProyecto-contDescricion-contTecno {
