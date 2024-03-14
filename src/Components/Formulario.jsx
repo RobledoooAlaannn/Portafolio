@@ -2,7 +2,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Toast, Toaster, toast } from "sonner";
+import {Toaster, toast } from "sonner";
 
 export function Formulario() {
   const form = useRef();

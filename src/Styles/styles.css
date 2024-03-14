@@ -59,16 +59,16 @@ body {
 }
 
 .contenedorPerfil {
-  margin: 160px 320px;
+  border-radius: 20px;
+  margin: 100px auto;
+  width: 80%;
   background-color: hsl(0, 100%, 50%);
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 1024px) {
   .contenedorPerfil {
-    flex-direction: column;
-    /* Cambia la dirección a columna en pantallas más pequeñas */
-    align-items: center;
-    /* Centra horizontalmente */
     margin: 50px auto;
   }
 }
@@ -79,6 +79,7 @@ body {
 }
 
 .Foto_perfil {
+  border-radius: 10px;
   margin: 10px;
   background-color: hsl(0, 100%, 25%);
   padding: 5px;
@@ -108,6 +109,7 @@ body {
   font-size: 25px;
   color: hsl(0, 0%, 95%);
   font-size: 20px;
+  border-radius: 10px;
 }
 @media screen and (max-width: 768px) {
   .contBibliografia #nombre, .contBibliografia #nacimiento {

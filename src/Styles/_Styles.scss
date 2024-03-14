@@ -36,15 +36,15 @@
 
 //Bibliografia
 .contenedorPerfil {
-    margin: 160px 320px;
+    border-radius: 20px;
+    margin:100px auto;
+    width: 80%;
     background-color: variables.$red;
     display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media screen and (max-width: 1024px) {
-        flex-direction: column;
-        /* Cambia la dirección a columna en pantallas más pequeñas */
-        align-items: center;
-        /* Centra horizontalmente */
         margin: 50px auto;
     }
 }
@@ -55,6 +55,7 @@
 }
 
 .Foto_perfil {
+    border-radius: 10px;
     margin: 10px;
     background-color: variables.$red-dark;
     padding: 5px;
@@ -80,6 +81,7 @@
     & #nacimiento {
         @include mixins.contenidoBibliografia;
         font-size: 20px;
+        border-radius: 10px;
 
         @media screen and (max-width: 768px) {
             font-size: 16px;

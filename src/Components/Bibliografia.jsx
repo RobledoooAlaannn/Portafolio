@@ -3,6 +3,7 @@ import "../Styles/styles.css";
 import FotoPerfil from "../img/PERFL.jpg";
 import CV from "../img/Mi CV.pdf";
 import Modal from "./modal";
+import { Toaster, toast } from "sonner";
 
 export function Bibliografia() {
   const [modalabierto, setModalAbierto] = useState(false);
@@ -47,6 +48,7 @@ export function Bibliografia() {
             mundo de la tecnología. ¡Espero poder compartir mi experiencia y
             contribuir al éxito de futuros proyectos! ¡Gracias por visitar mi
             portafolio!
+            {/* ¡Hola! Soy Alan, tengo 22 años y estoy a punto de convertirme en Analista en Sistemas. Estudio en la Universidad Nacional del Oeste y estoy emocionado de estar en la etapa final de mi carrera. Mi formación sólida en programación y diseño de sistemas me prepara para proyectos del mundo real. Además de la informática, disfruto del boxeo para mantenerme en forma física y mentalmente. Estoy ansioso por crecer profesionalmente y enfrentar nuevos desafíos en tecnología. ¡Gracias por visitar mi portafolio! */}
           </p>
 
           <div className="contenedorBtns">
@@ -54,12 +56,18 @@ export function Bibliografia() {
               Saber más
             </button>
 
-            <a download="Robledo Alan cv" href={CV} className="CV">
+            <a
+              download="Robledo Alan cv"
+              href={CV}
+              className="CV"
+              onClick= {() => toast.success("Se ha descargado con exito")}
+            >
               Descargar CV{" "}
               <span>
                 <i className="fa-solid fa-file-arrow-down"></i>
               </span>
             </a>
+            <Toaster richColors  position='top-center' dri='auto'/>
 
             <button className="botonSaber" onClick={toggleSkills}>
               Mis Skills
